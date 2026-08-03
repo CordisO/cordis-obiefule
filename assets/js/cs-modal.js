@@ -118,7 +118,7 @@ const caseStudies = {
       }
     ],
     tech: ['UX Audit', 'Product Strategy', 'Figma', 'Information Architecture']
-  }
+  },
   chunksky: {
     title: 'Chunksky: An AI Cognitive Assistant',
     label: '04 — Solo Concept & End-to-End Design',
