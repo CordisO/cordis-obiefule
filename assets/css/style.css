@@ -537,6 +537,10 @@ body {
     background-image: url('../images/sportlingo-3-homepath.png');
 }
 
+.project-4::before {
+    background-image: url('../images/chunksky-1-onboarding.png');
+}
+
 
 /*PROCESS SECTION STYLING*/
 #process {
