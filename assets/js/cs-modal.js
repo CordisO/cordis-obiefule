@@ -72,7 +72,6 @@ const caseStudies = {
     ],
     tech: ['Figma']
   },
-  /* DRAFT — replace with real screenshots + final copy once available */
   sportlingo: {
     title: 'Sportlingo Audit: Stripping Away Founder Bias',
     label: '03 — UX Audit & Product Redesign',
@@ -119,6 +118,62 @@ const caseStudies = {
       }
     ],
     tech: ['UX Audit', 'Product Strategy', 'Figma', 'Information Architecture']
+  }
+  chunksky: {
+    title: 'Chunksky: An AI Cognitive Assistant',
+    label: '04 — Solo Concept & End-to-End Design',
+    sections: [
+      {
+        heading: 'The Core Challenge',
+        text: `Neurodivergent individuals (ADHD, Autism, etc.) often suffer from "task paralysis." The brain sees a large task like "Clean the room" and gets overwhelmed by the thousands of micro-decisions required to start.\n\nThe core challenge was designing an interface that not only breaks down the task but also feels emotionally safe enough to lower the user's anxiety levels immediately upon opening the app.`,
+        images: [
+          { type: 'single', src: 'assets/images/chunksky-1-onboarding.png', caption: 'Splash screen and onboarding — setting a calm, low-stakes tone from the first tap.' }
+        ]
+      },
+      {
+        heading: 'EdTech Product Strategy',
+        text: `Chunksky addresses a critical gap in the EdTech and Assistive Tech space: Executive Dysfunction. While most productivity apps focus on organization (categorizing tasks, managing calendars), they fail users who experience task paralysis — the inability to start because the planning phase feels overwhelming.\n\nMy strategy was to strip away all "productivity gamification" (streaks, badges, leaderboards) and instead design a low-stakes, calm, shame-free environment. The product doesn't aim to make users "more productive"; it aims to make them feel capable.`
+      },
+      {
+        heading: 'Decision 1: The Input Screen (Voice + Text)',
+        text: `I intentionally avoided a blank "Add a task" screen, which causes analysis paralysis. Instead, I provided a large text area with a microphone button, and added "Quick Templates" (like Laundry, Shower) underneath.\n\nThis gives users three ways to start: Type, Speak, or Tap. It removes the friction of having to think about how to input the task — the app then breaks it down into a short, editable list of steps with time estimates.`,
+        images: [
+          { type: 'single', src: 'assets/images/chunksky-3-input.png', caption: 'Three ways to start: type, speak, or tap a quick template.' },
+          { type: 'single', src: 'assets/images/chunksky-4-steps.png', caption: '"Break It Down" turns one overwhelming task into small, timed, editable steps.' }
+        ]
+      },
+      {
+        heading: 'Decision 2: The Pacing Selector',
+        text: `I know that neurodivergent energy fluctuates daily. Some days you can power through; other days you can barely move. I designed three pacing options: "Slow," "Steady," and "Fast." I paired each with a distinct icon (clover, lightning bolt, fire) to make the choice intuitive.\n\nThis gives the user back the agency to match the app to their current mental state, rather than forcing one fixed pace onto every day.`,
+        images: [
+          { type: 'single', src: 'assets/images/chunksky-2-setup.png', caption: 'Nickname, pacing selector, and the resulting home screen greeting.' }
+        ]
+      },
+      {
+        heading: 'Decision 3 & 4: The Countdown Timer & The "I Need a Break!" Button',
+        text: `I deliberately rejected a standard clock or a closing circle because it feels like a ticking time bomb. I designed an open olive-green arc that slowly grows to fill the circle — it visually mimics a path being walked, not a cage closing in. It feels like a guide, not a judge.\n\nThe "I need a break!" button is the most important button in the app. I placed it at the bottom, in a warm terracotta color, separate from the task controls. It acts as an escape hatch. It tells the user: "You are allowed to stop without failing." Designing for failure is just as important as designing for success.`,
+        images: [
+          { type: 'single', src: 'assets/images/chunksky-5-ready.png', caption: 'A final pace check before starting, then a gentle loading state.' },
+          { type: 'single', src: 'assets/images/chunksky-6-timer.png', caption: 'The open arc timer and the "I need a break!" escape hatch, always in view.' }
+        ]
+      },
+      {
+        heading: 'Decision 5: The Visual Palette',
+        text: `I avoided harsh whites and aggressive primary colors. I chose a warm cream background and a nature-inspired palette of cream, olive, and terracotta. This was a conscious attempt to lower visual stimulation and sensory overload. The colors are designed to feel like a warm hug, not a corporate dashboard.`
+      },
+      {
+        heading: 'Monetization Strategy & Target Impact Metrics',
+        text: `Chunksky is designed with an accessible-first mindset. Instead of paywalls, subscriptions, or locked features, monetization is offered via an optional "Donation" setting hidden quietly in the user profile. This ensures financial barriers never prevent a neurodivergent user from accessing the cognitive support they need.\n\nTarget KPIs:\n• Time-to-start: reduce the time from opening the app to beginning the first micro-task to under 30 seconds.\n• Task Initiation Rate: aiming for a 90% success rate in users completing the first micro-step after generating a task.\n• Sensory Load Reduction: 100% of the design's palette and animations tested for low visual stimulation, avoiding harsh contrasts or flashing elements.`
+      },
+      {
+        heading: 'What the User Gains',
+        text: `Users gain their executive function back. Chunksky acts as an external brain, handling the heavy cognitive load of "planning." The user no longer has to fight their own brain to start a chore; they simply speak a desire, and the app hands them a tiny, easy next step. The app gives users a sense of agency and accomplishment without overwhelming them.\n\nChunksky is not a productivity app; it is a cognitive accessibility tool. It serves as a proof-of-concept that AI, when designed with empathy, can be used not to replace human effort, but to unblock it. By focusing on emotional safety, low-stimulus design, and zero-friction input, Chunksky proves that the best assistive technology is the kind that helps you help yourself — one tiny chunk at a time.`,
+        images: [
+          { type: 'single', src: 'assets/images/chunksky-7-complete.png', caption: 'Session complete — progress is celebrated without judging the steps left undone.' }
+        ]
+      }
+    ],
+    tech: ['UX Strategy', 'AI Product Design', 'Figma', 'Accessibility']
   }
 };
 
