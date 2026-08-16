@@ -221,6 +221,43 @@ const caseStudies = {
       }
     ],
     tech: ['UX Research', 'Instructional Design', 'Figma', 'HTML', 'CSS', 'JavaScript', 'PWA']
+  },
+  univerbal: {
+    title: 'Univerbal: Redesigning an AI Language App',
+    label: '06 — UX Audit & Redesign',
+    sections: [
+      {
+        heading: 'Testing Univerbal',
+        text: `Univerbal is an AI-powered language app developed by universities in Switzerland. I tested it with the aim of learning Japanese from scratch — curious whether an app built around AI voice recognition and a chatbot tutor would actually teach me anything.\n\nWhat followed was a 15-minute struggle through an incredibly long onboarding, a confusing dashboard, and an AI that congratulated me for saying the wrong thing. In the end, I hadn't learned a single word.`
+      },
+      {
+        heading: 'Key UX Issues',
+        text: `Overwhelming Onboarding: Before I saw a single Japanese character, the app asked me my comfort level, why I wanted to learn Japanese, which two skills to focus on, what the hardest part of learning Japanese was (I'd never tried before), how I wanted to build a study plan, and what my interests were. A beginner doesn't know what they need to focus on — that's why they're a beginner. Asking someone to design their own curriculum before they've seen a single lesson creates anxiety, not excitement.\n\nCluttered Dashboard: After signing up, I landed on a homepage with a "Daily Challenge," a "Daily Mission," a "Let's Learn Unit 1" card, and a 3-toggle bar for Vocabulary/Exercise/Conversation. A beginner shouldn't have to choose where to start — the app should tell them exactly where to click.\n\nThe Feedback Trap: In the conversation exercise, the AI tutor introduced itself and asked if I was a new classmate. I replied with the only Japanese phrase I knew — a random greeting that didn't actually answer the question. The app celebrated anyway: "Great! 🎉" It wasn't checking for semantic relevance, just validating any spoken input.\n\nScript Without Romaji: The app dropped Japanese script straight onto the screen with no romanized spelling to help pronounce it. Asking a complete beginner to memorize abstract symbols before they even know what sound they make gets the learning order backwards — sound and phonetic spelling should come first, native script second.`,
+        images: [
+          { type: 'single', src: 'assets/images/univerbal-2-onboarding-original.png', caption: 'The original onboarding: five screens of preference-gathering before a single lesson.' }
+        ]
+      },
+      {
+        heading: 'The Redesign: Dashboard',
+        text: `I removed the Daily Challenge and Daily Mission cards and replaced the 3-toggle bar with a single, prominent next step. The redesigned dashboard presents one clear, linear path: learn the alphabet first (Hiragana), then unlock conversational units — the user never has to guess what to click.`,
+        images: [
+          { type: 'single', src: 'assets/images/univerbal-1-dashboard-before-after.png', caption: 'Before / after: a cluttered multi-card homepage becomes one clear next action.' }
+        ]
+      },
+      {
+        heading: 'The Redesign: Onboarding & First Lesson',
+        text: `The onboarding is stripped down to what actually matters: what you want to learn, and your current level. Everything else — interests, study-plan preferences, skill customization — is deferred until after the learner has actually seen a lesson.\n\nThe first lesson is a mini-lesson conversation that introduces the tutor and the app in plain English before any Japanese appears. When Japanese is introduced, the romanized spelling ("Konnichiwa") sits right alongside the script, so the learner can read, say, and recognize the word instead of relying on the audio button alone. The lesson closes with a genuine milestone: "You just said your first word in Japanese."`,
+        images: [
+          { type: 'single', src: 'assets/images/univerbal-3-redesign-flow-a.png', caption: 'Redesigned onboarding: level selection, then a conversational intro entirely in English.' },
+          { type: 'single', src: 'assets/images/univerbal-4-redesign-flow-b.png', caption: 'Japanese is introduced with romaji alongside the script, closing on a real first milestone.' }
+        ]
+      },
+      {
+        heading: 'Takeaways',
+        text: `Scaffold before you customize — a beginner can't meaningfully choose their focus areas before they've seen what the subject even looks like. Give every screen one clear next action instead of a menu of options. Teach phonetics before native script, not after. And design feedback that checks for real understanding, not just valid input — an AI tutor that celebrates any spoken response teaches the user nothing about whether they were actually right.`
+      }
+    ],
+    tech: ['UX Audit', 'Figma', 'Instructional Design']
   }
 };
 
