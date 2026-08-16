@@ -542,7 +542,7 @@ body {
 }
 
 .project-5::before {
-    background-image: repeating-linear-gradient(135deg, var(--card-color) 0px, var(--card-color) 18px, var(--border-color) 18px, var(--border-color) 36px);
+    background-image: url('../images/decodyssey.png');
 }
 
 
