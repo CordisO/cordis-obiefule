@@ -174,6 +174,53 @@ const caseStudies = {
       }
     ],
     tech: ['UX Strategy', 'AI Product Design', 'Figma', 'Accessibility']
+  },
+  decodyssey: {
+    title: 'Decodyssey: Critical Thinking as Survival Skill',
+    label: '05 — Final Year Project · UX Research & Instructional Design',
+    sections: [
+      {
+        heading: 'The Problem: A Geographic Bias in Critical Thinking',
+        text: `Most established critical thinking frameworks — including foundational work like Paul and Elder (2020) and Facione (1990) — were developed by researchers in stable, resourced societies, where the worst outcome of a reasoning failure was usually an intellectual error: a bad grade, a lost debate. In that context, critical thinking could afford to be taught as an abstract exercise: logic puzzles, philosophical arguments, structured debates.\n\nGrowing up in Nigeria, my reality was different. Distinguishing genuine information from manipulation — a suspicious bank alert, a too-good-to-be-true investment, unsolicited medical advice — wasn't an academic skill, it was a daily survival tool. I termed this gap "Privileged Thinking Bias": a mode of reasoning that emerges from contexts stable enough to treat risk as recreational. Where I grew up, risk wasn't a choice.\n\nOne moment stuck with me: I burned my finger on steam, and a neighbor told me to put "sodium chloride" on it. The scientific-sounding term made me pause — sodium chloride is just salt. If I hadn't questioned it, I would have followed advice that didn't actually help. That single moment of confusion became the literal origin of this project.`
+      },
+      {
+        heading: 'The Gap: What Existing Tools Missed',
+        text: `I identified three persistent problems: an "Abstract Context Divide," where learners who could spot a fallacy in a textbook failed to recognize the same pattern in a market transaction or a family WhatsApp message; engagement and accessibility barriers, since most critical-thinking apps taught boring, forgettable definitions rather than practical recognition; and an absence of scalable intervention, since one-on-one tutoring works but can't reach population scale.\n\nNo existing mobile app combined scenario-based instruction using authentic, high-stakes contexts, microlearning architecture with progressive difficulty, and interface design prioritizing cognitive clarity over aesthetic minimalism. That was the gap Decodyssey was built to fill.\n\nThe aim: design, develop, and evaluate a microlearning app that teaches critical thinking through real-world, scenario-based practice targeting common logical fallacies in high-stakes Nigerian contexts.`
+      },
+      {
+        heading: 'Instructional Design: The Five-Part Scenario Structure',
+        text: `Every scenario in Decodyssey follows the same five-part structure, refined through iterative testing:\n\n• Context — 3-5 sentences placing the user in a recognizable situation from Nigerian daily life (financial, educational, professional, social, or domestic).\n• Trap — the manipulative statement itself, using the jargon, pressure, or urgency tactics people actually encounter.\n• Decision Point — framed as "What do you do?" so the interaction feels like a real decision under pressure, not an abstract puzzle.\n• Choices — three constrained options, keeping cognitive load manageable while preserving engagement.\n• Feedback — an immediate one-word verdict ("Exactly," "Good instinct," "Not quite"), a one-sentence explanation, and a one-sentence transferable lesson.\n\nThis compresses traditional case-study methodology into a 2-3 minute mobile interaction. The Home & Daily Life module was fully built out with 15 scenarios across 5 levels — early levels use obvious manipulation techniques, later levels combine multiple techniques. Level 1, Scenario 1 is "The Burn": the sodium chloride moment that started the whole project.`
+      },
+      {
+        heading: 'Design Decisions',
+        text: `Every instructional and interface decision was made against the same test: does this serve survival-relevant reasoning, or does it just look like a learning app?\n\n• Scenario-based content — embeds reasoning in situations people actually recognize, rather than abstract logic.\n• Three choices per scenario — constrains cognitive load while keeping the decision real.\n• Immediate feedback — closes the learning loop in real time instead of delaying it.\n• Progressive unlocking — creates accomplishment markers and paces the learner.\n• Offline functionality — Nigerian connectivity isn't always reliable, so the app had to work without it.\n• Plain, simple language — keeps the content accessible to learners with learning disabilities, not just fluent readers.\n• Minimal gamification — streaks and badges were kept deliberately light so they don't compete with focus on the scenario itself.`
+      },
+      {
+        heading: 'Screen Design',
+        text: `The interface was prototyped in Figma before any code was written, to validate navigation flow and interaction patterns first.\n\n• Splash Screen — full-screen white background, bold app name, tagline "Learn to reason. Assess the Logic." Auto-advances to the context picker.\n• Context Picker — six cards, each with an icon, title, description, and arrow, covering domains like Home & Daily Life, School & Education, Work & Productivity, Social Media, Money & Finance, and Health & Body. A purple border marks the active selection.\n• Level Path — a vertical scrolling path of circular nodes, inspired by Duolingo's node path: purple fill for active levels, a checkmark for completed ones, grey with a lock icon for locked ones, with a context switcher at the top.\n• Scenario Interaction — a progress indicator (1/3, 2/3, 3/3), neutrally-framed scenario text, the "What do you do?" prompt, and three full-width choice buttons, with minimized white space to reduce cognitive load.\n• Feedback Screen — color-coded by outcome (green, amber, red), a one-word verdict, a one-sentence explanation, a one-sentence transferable lesson, and a "Continue" button.`,
+        images: [
+          {
+            type: 'grid',
+            images: [
+              { src: 'assets/images/decodyssey-1-splash.png', caption: 'Splash Screen' },
+              { src: 'assets/images/decodyssey-2-context-picker.png', caption: 'Context Picker' },
+              { src: 'assets/images/decodyssey-3-level-path.png', caption: 'Level Path' },
+              { src: 'assets/images/decodyssey-4-scenario.png', caption: 'Scenario Interaction' },
+              { src: 'assets/images/decodyssey-5-feedback.png', caption: 'Feedback Screen' }
+            ]
+          }
+        ]
+      },
+      {
+        heading: 'System Architecture',
+        text: `Decodyssey is a client-side-only, offline-first Progressive Web App — a decision driven by four constraints: no server costs or maintenance burden for a self-funded student project, the need to function without reliable internet, reduced complexity for a single-developer build, and alignment with the connectivity realities target users actually face.\n\nThe system runs in three layers: a Presentation Layer handling UI rendering and screen transitions; an Application Logic Layer managing scenario flow, answer validation, streaks, and progressive unlocking; and a Data Layer storing all scenario content as structured JSON, with a Service Worker caching everything after first load so the app works fully offline afterward.`
+      },
+      {
+        heading: 'Testing & What I Learned',
+        text: `I ran a small pilot test with 7 participants using pre- and post-test critical thinking assessments. The results also surfaced a real instructional design flaw early — some choice subtext was inadvertently hinting at the correct answer — which I identified and corrected before wider use. Catching it through actual testing, rather than assuming the design was fine, was itself the most useful part of the pilot.\n\nThe core contribution of this project isn't the app's polish — it's the instructional model underneath it: that critical thinking, for a lot of people, isn't an academic skill to be taught in the abstract. It's a survival mechanism that has to be taught the way it's actually used — in context, under pressure, in language people already understand.`
+      }
+    ],
+    tech: ['UX Research', 'Instructional Design', 'Figma', 'HTML', 'CSS', 'JavaScript', 'PWA']
   }
 };
 
