@@ -541,6 +541,10 @@ body {
     background-image: url('../images/chunksky-1-onboarding.png');
 }
 
+.project-5::before {
+    background-image: repeating-linear-gradient(135deg, var(--card-color) 0px, var(--card-color) 18px, var(--border-color) 18px, var(--border-color) 36px);
+}
+
 
 /*PROCESS SECTION STYLING*/
 #process {
