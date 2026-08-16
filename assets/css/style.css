@@ -545,6 +545,10 @@ body {
     background-image: url('../images/decodyssey.png');
 }
 
+.project-6::before {
+    background-image: url('../images/univerbal-1-dashboard-before-after.png');
+}
+
 
 /*PROCESS SECTION STYLING*/
 #process {
