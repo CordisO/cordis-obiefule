@@ -6,38 +6,60 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
 /* ===== CASE STUDY DATA ===== */
 const caseStudies = {
-  noeopad: {
-    title: 'Noeopad NoteTaking Website',
-    label: '01 — Note-taking App',
+    blahlo: {
+    title: 'Blahlo: Learning Language the Way the Brain Wants To',
+    label: '01 — Self-Directed Product & Instructional Design',
     sections: [
       {
-        heading: 'The Problem: Why I made NoeoPad',
-        text: `I made NoeoPad because most note-taking apps have too many buttons and menus. When there are too many choices, it becomes hard to start writing. This is especially difficult for people with ADHD or people who get overwhelmed easily.\n\nWhat I found:\n• Too many features make it hard to focus on just one task.\n• Bright white screens can be painful or distracting to look at for a long time.\n• Standard apps feel "busy," which can cause anxiety.`,
+        heading: 'The Question That Started It',
+        text: `Blahlo was designed as a self-directed project. There was no client, no brief, and no team. The process began with a question I couldn't let go of: why do so many people fail to learn a language despite trying so hard?\n\nTo answer that, I studied how children acquire their first language, how existing language apps structure their lessons, and where the disconnect happens between memorization and understanding. That research led to the Concentric Learning Model, which became the instructional backbone of the entire app.`,
         images: [
-          { type: 'single', src: 'assets/images/noeopad-1.png', caption: 'Reducing Decision Paralysis: A single-column task creator to maintain linear focus.' }
+          { type: 'single', src: 'assets/images/blahlo-1-first-iteration-screens.png', caption: 'First design iteration: splash screen, welcome with the Blah Family, and the lesson path.' }
         ]
       },
       {
-        heading: 'The Design: Making the app easy to use',
-        text: `I wanted NoeoPad to feel calm and predictable. Every design choice was made to help the user stay focused and feel safe while using the tool.\n\nHow I made it better:\n• The Purple Background: I used a soft purple color instead of white. This is easier on the eyes and feels more private.\n• Simple Navigation: I only used two main areas: "Notes" and "To-Do." This means the user does not have to learn a complex menu.\n• Big Buttons: I made the "Create" button large and put it in a place that is easy to reach with a thumb on a phone.`,
+        heading: 'The Concentric Learning Model',
+        text: `Most apps teach vocabulary in whatever order fits a topic list — colors, then food, then travel — with no real logic connecting them. The Concentric Learning Model (CLM) instead structures learning the way a child actually expands their understanding of the world: starting at Self, then outward through Home & Family, Community & Transport, and finally Abstract Society.\n\nThe design implementation of this is what I call the Concentric Vertical Tree (CVT) — a learning path that looks familiar on the surface (a vertical node tree, similar to what learners already expect from language apps) but is structured underneath by the concentric rings, not an arbitrary topic list. Levels contain Units (a baseline of 4 per level), and Units contain Lessons (a baseline of 6 per unit).`,
         images: [
-          { type: 'single', src: 'assets/images/noeopad-4.png', caption: 'The "New Task" screen: Everything is in one straight line so it is easy to follow.' }
+          { type: 'single', src: 'assets/images/blahlo-4-concentric-model.png', caption: 'The Concentric Learning Model: Self → Home & Family → Community & Transport → Abstract Society.' },
+          { type: 'single', src: 'assets/images/blahlo-5-learning-architecture-doc.png', caption: 'From the internal product documentation — the CLM/CVT learning architecture.' }
         ]
       },
       {
-        heading: 'Features: Helping the user focus',
-        text: `I added specific features to help the brain stay on one task at a time. I focused on making the app feel "quiet."\n\nSpecific features I added:\n• Background Blur: When you open a new note, the rest of the screen gets blurry. This helps your eyes stay on what you are currently writing.\n• Dark Mode: I made a dark version of the app for people who are sensitive to light. I used soft greys instead of pure black to keep the contrast comfortable.\n• Accessibility: I added labels to buttons so that screen readers can describe them clearly to users who cannot see the screen`,
+        heading: 'Curriculum Mapping',
+        text: `I mapped vocabulary and concepts to the three concentric circles in the order a child would naturally encounter them. For an Indonesian Level 1 — "The Self" — that means phonetics, senses, and direct needs: vowel and consonant precision first, then base numbers and counting, then pronouns and core internal states, then how to express direct needs and negation.\n\nLevel 2, "The Home," moves outward into micro-social structure — possessive syntax and household vocabulary. Nothing is introduced before the learner has the foundation to actually use it.`,
         images: [
-          { type: 'single', src: 'assets/images/noeopad-2.png', caption: 'Left: The blur helps you focus.' },
-          { type: 'single', src: 'assets/images/noeopad-3.png', caption: 'Right: Dark mode for light sensitivity.' }
+          { type: 'single', src: 'assets/images/blahlo-6-curriculum-example-doc.png', caption: 'Curriculum mapping for Indonesian Level 1: The Self.' }
         ]
       },
       {
-        heading: 'Next Steps: What I learned',
-        text: `Designing this app taught me that "less is more." Sometimes, taking a button away is more helpful than adding a new one.\n\nWhat I changed during the project:\n• I originally hid the toolbar, but I realized it was hard for people to find. So I made it more obvious.\n• My Goal: I want to keep testing this with real people to see if the buttons are easy to find and if the "save" message is clear enough.\n• The Lesson: Good design should be invisible. It should just work without making the user think too hard.`
+        heading: 'The Lesson Rhythm',
+        text: `Every lesson follows the same four-part rhythm: Context, which sets the scene; Notice, which shows the pattern; Practice, where the learner types, speaks, and builds; and Confirm, which requires them to actually prove understanding.\n\nA few rules sit underneath this rhythm: active production is required throughout — speaking, typing, building, not just tapping a multiple-choice option — and progression is mastery-based, gated by understanding rather than repetition or a "hearts" system. Feedback isn't just right-or-wrong; it carries insight and reinforces the pattern being taught. Review is embedded directly into later lessons rather than appended as separate review sessions.`,
+        images: [
+          { type: 'single', src: 'assets/images/blahlo-2-lesson-rhythm.png', caption: 'The Blahlo Lesson Rhythm: Context → Notice → Practice → Confirm.' }
+        ]
+      },
+      {
+        heading: 'Context Over Memorization',
+        text: `The instructional flaw I kept finding in existing apps was decontextualized vocabulary — a word on one side, its translation on the other, repeated until it sticks. That teaches recall, not understanding.\n\nBlahlo instead introduces vocabulary inside a scene: characters using the word the way it's actually spoken, with the meaning legible from context rather than a translation key. The goal is for the learner to focus on meaning, not navigation or rote pattern-matching.`,
+        images: [
+          { type: 'single', src: 'assets/images/blahlo-3-contextualized-comparison.png', caption: 'Before / after: rote translation pairs vs. vocabulary introduced in context.' }
+        ]
+      },
+      {
+        heading: 'The Screens in Practice',
+        text: `Each scene was structured to be predictable and emotionally legible, so learners could focus on meaning rather than figuring out navigation. The Blah Family mascot stays present through exercises, and feedback is immediate and color-coded — a clear "Great job!" or "That's right" in green, a gentle correction in red, never a dead end.`,
+        images: [
+          { type: 'single', src: 'assets/images/blahlo-7-figma-screens-a.png', caption: 'Vowel-sound recognition exercises, built in Figma.' },
+          { type: 'single', src: 'assets/images/blahlo-8-figma-screens-b.png', caption: 'Sound-identification quiz cards with immediate, color-coded feedback.' }
+        ]
+      },
+      {
+        heading: 'Documentation & What\'s Next',
+        text: `I rewrote the full design documentation twice as the framework evolved, refining the instructional logic until it was coherent and scalable. That documentation now covers the learning architecture, scene structure, reward metrics, monetization strategy, and character design for the Blah Family — the foundation for turning this from a design framework into a built product.`
       }
     ],
-    tech: ['HTML', 'CSS', 'JavaScript', 'Figma']
+    tech: ['Instructional Design', 'Figma', 'UX Research', 'Product Strategy']
   },
   ankidroid: {
     title: 'AnkiDroid Mobile App Redesign',
