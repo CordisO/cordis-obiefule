@@ -526,7 +526,7 @@ body {
 
 /* Project-specific background images */
 .project-1::before {
-    background-image: url('../images/noeopad.png');
+    background-image: url('../images/blahlo-1-first-iteration-screens.png');
 }
 
 .project-2::before {
